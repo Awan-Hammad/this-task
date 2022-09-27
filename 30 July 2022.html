@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <title>jquery</title>
+    <!-- <style>
+        
+        /* *{
+            background-color: blue;
+        }
+        .class{
+            background-color: aqua;
+        }
+        #student{
+            background-color: royalblue;
+        }
+        h2{
+            font-size: xx-large;
+        } */
+        
+    </style> -->
+</head>
+<body>
+    <!-- <h1 id="test">Hello World</h1>
+    <button onclick="abc()">click here</button>
+        <script>  
+        
+        function abc(){
+        document.getElementById("test").innerHTML = "Button is working";
+    }
+    </script> -->
+
+    <!-- <div class="container">
+        <h2>collapsible Example by bootstrap</h2>
+
+        <button class="btn btn-primary" data-toggle="collapse" data-target="#test">collapsible</button>
+        <div id="test" class="collapse">
+            data-target is used by bootstrap to make your life easier. You (mostly) do not need to write a single line of Javascript to use their pre-made JavaScript components.
+            The data-target attribute should contain a CSS selector that points to the HTML Element that will be changed.data-target is used by bootstrap to make your life easier. 
+            You (mostly) do not need to write a single line of Javascript to use their pre-made JavaScript components. The data-target attribute should contain a CSS selector that 
+            points to the HTML Element that will be changed.
+        </div>
+    </div> -->
+
+    <!-- <div class="container">
+        <h2>collapsible Example by jquery</h2>
+
+        <button class="btn btn-primary" id="test">collapsible</button>
+        <div id="demo" class="collapse">
+            data-target is used by bootstrap to make your life easier. You (mostly) do not need to write a single line of Javascript to use their pre-made JavaScript components.
+            The data-target attribute should contain a CSS selector that points to the HTML Element that will be changed.data-target is used by bootstrap to make your life easier. 
+            You (mostly) do not need to write a single line of Javascript to use their pre-made JavaScript components. The data-target attribute should contain a CSS selector that 
+            points to the HTML Element that will be changed.
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#test').click(function(){
+            $('.collapse').collapse();
+            });
+        });
+    </script>
+
+    <div class="container">
+        <h2>J query</h2>
+        <a href="#" data-toggle="popover" title="popover header" data-content="Hi Good Morning">Toggle popover</a>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();
+        });
+    </script> -->
+
+    <script>
+        //  function Multiply(var1, var2, var3){
+        //      return (var1 * var2 * var3);
+        //  }
+        // document.write("Basic way:"+Multiply(10, 10, 8));
+        
+        // var Multiply = function (var1, var2, var3){
+        //    return(var1 * var2 * var3);
+        // }
+        // document.write("<br>" + "Function as variable Name: "+Multiply(10, 10, 8));
+
+        // (function () {document.write("<br>" + "Self Invoking Function, Hello! I called myself");})();
+        
+        // $(document).ready(function () {
+        //     $.fn.myfunction = function () {
+        //         alert('function is working')
+        //     }
+        //     $(".call-btn").click(function(){
+        //         $.fn.myfunction();
+        //     });
+        // });
+
+        $(document).ready(function(){
+            $('#btnsubmit').click(function(){
+                var result = $('input[type="checkbox"]:checked');
+                if(result.length > 0){
+                    var resultstring = result.length + "checkbox(s) checked<br/>";
+                    result.each(function(){
+                        resultstring += $(this).val() + "<br/>";
+                    });
+                    $('#divResult').html(resultstring);
+                }
+                else{
+                    $('#divResult').html("no check checked");
+                }
+            });
+        });
+
+        $(document).ready(function(){
+            $('#button1').click(function(){
+                alert('jquery selector');
+            });
+        });
+    
+        $(document).ready(function(){
+            $('.small').css('border','5px solid green');
+        });
+
+        $(document).ready(function(){
+            alert($('td').length);
+        });
+
+    </script>
+    <!-- <div id="div1"><h2>Function in jquery</h2></div>
+    <button class="call-btn">click here</button>
+    
+    <h2 class="class">Mubeen</h2>
+    <h3 id="student">Raza</h3> -->
+
+    <table style="border: 1px solid black; border-collapse: collapse;">
+        <tr>
+            <td>Pakistan</td>
+            <td>Germany</td>
+            <td>France</td>
+        </tr>
+        <tr>
+            <td>Europe</td>
+            <td>Asia</td>
+            <td>Australia</td>
+        </tr>
+    </table>
+
+        <span class="small">
+            span 1
+        </span>
+        <br /><br />
+        <div class="small">
+            Div1
+        </div>
+        <br />
+        <span class="big">
+            span 2 
+        </span>
+        <div class="smaller">
+            Div 2
+
+        </div>
+
+        <input id="button1"  type="button" value="Click Me"/>
+
+    <div class="container">
+        <input type="checkbox" name="skills" value="Pakistan"/>Pakistan
+        <input type="checkbox" name="skills" value="Germany"/>Germany
+        <input type="checkbox" name="skills" value="Russia"/>Russian
+        <br><br>
+        
+        <input id="btnsubmit" type="submit" value="submit">
+
+        <br><br>
+
+        <div id="divResult">
+
+        </div>
+
+    </div>
+
+</body>
+</html>
